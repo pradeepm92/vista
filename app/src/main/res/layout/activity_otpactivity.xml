@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.health.vistacan.otp.viewmodel.OTPViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            tools:context=".otp.view.OTPActivity">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                app:tint="@color/purple_700"
+                android:src="@drawable/backarrow"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/verficationcode"
+                android:textColor="@color/purple_700"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/otpsmptext"
+                android:textColor="@color/dark_grey"
+                android:textSize="20sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center">
+
+
+
+                <com.chaos.view.PinView
+                    android:id="@+id/PinView"
+                    style="@style/PinWidget.PinView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:paddingStart="25dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cursorColor="@color/black"
+                    app:cursorWidth="2dp"
+                    app:hideLineWhenFilled="false"
+                    app:itemCount="6"
+                    app:itemHeight="40dp"
+                    app:itemRadius="10dp"
+                    app:itemSpacing="5dp"
+                    app:itemWidth="40dp"
+                    app:lineColor="@color/purple_700"
+                    app:lineWidth="2dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/resendotp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:text="@string/resent_otp"
+                android:textColor="@color/dark_grey"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="15dp"
+                android:backgroundTint="@color/purple_700"
+                android:shadowColor="@color/light_grey"
+                android:text="@string/verify"
+                android:textAllCaps="false"
+                android:textSize="18dp"
+                app:cornerRadius="20dp"
+                app:elevation="10dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

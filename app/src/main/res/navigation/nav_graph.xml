@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.health.vistacan.home.HomeFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_patientFragment"
+
+            app:destination="@id/patientFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_patientListFragment"
+
+            app:destination="@id/patientListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_encounterListFragment"
+
+            app:destination="@id/encounterListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.health.vistacan.FirstFragment"
+        android:label="@string/patients"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.health.vistacan.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientFragment"
+        android:name="com.health.vistacan.patient.view.AddPatientFragment"
+        android:label="@string/newpatients"
+        tools:layout="@layout/fragment_patient"/>
+    <fragment
+        android:id="@+id/patientListFragment"
+        android:name="com.health.vistacan.patient.view.PatientListFragment"
+        android:label="@string/patientlist"
+        tools:layout="@layout/fragment_patient_list" >
+        <action
+            android:id="@+id/action_patientListFragment_to_editPatientListFragment"
+            app:destination="@id/editPatientListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/encounterListFragment"
+        android:name="com.health.vistacan.encounter.view.EncounterListFragment"
+        android:label="@string/encounters"
+        tools:layout="@layout/fragment_encounter_list" >
+        <action
+            android:id="@+id/action_encounterListFragment_to_encounterPatientEntryFragment"
+            app:destination="@id/encounterPatientEntryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/soundRecordFragment"
+        android:name="com.health.vistacan.encounter.view.SoundRecordFragment"
+        android:label="Sound Record"
+        tools:layout="@layout/fragment_sound_record" >
+        <action
+            android:id="@+id/action_newEncounterFragment_to_diagnosisFragment"
+            app:destination="@id/diagnosisFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.health.vistacan.report.ReportFragment"
+        android:label="Reports"
+      />
+    <fragment
+        android:id="@+id/feeCodeFragment"
+        android:name="com.health.vistacan.encounter.view.FeeCodeFragment"
+        android:label="Fee Code"
+        tools:layout="@layout/fragment_fee_code"/>
+    <fragment
+        android:id="@+id/diagnosisFragment"
+        android:name="com.health.vistacan.DiagnosisFragment"
+        android:label="Diagnosis"
+        tools:layout="@layout/fragment_diagnosis">
+        <action
+            android:id="@+id/action_diagnosisFragment_to_feeCodeFragment"
+            app:destination="@id/feeCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/encounterPatientEntryFragment"
+        android:name="com.health.vistacan.encounter.view.EncounterPatientEntryFragment"
+        android:label="Encounter Patient Entry"
+        tools:layout="@layout/fragment_encounter_patient_entry" >
+        <action
+            android:id="@+id/action_encounterPatientEntryFragment_to_encounterDateandServiceFragment"
+            app:destination="@id/encounterDateandServiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/encounterDateandServiceFragment"
+        android:name="com.health.vistacan.encounter.view.EncounterDateandServiceFragment"
+        android:label="Encounter Date and Service"
+        tools:layout="@layout/fragment_encounter_dateand_service" >
+        <action
+            android:id="@+id/action_encounterDateandServiceFragment_to_patientPictureFragment"
+            app:destination="@id/patientPictureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientPictureFragment"
+        android:name="com.health.vistacan.encounter.view.PatientPictureFragment"
+        android:label="Patient and Medical Image   "
+        tools:layout="@layout/fragment_patient_picture" >
+        <action
+            android:id="@+id/action_patientPictureFragment_to_newEncounterFragment"
+            app:destination="@id/soundRecordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPatientListFragment"
+        android:name="com.health.vistacan.patient.view.EditPatientListFragment"
+        android:label="Edit patient List"
+        tools:layout="@layout/fragment_edit_patient_list" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.health.vistacan.setting.view.SettingFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.health.vistacan.setting.view.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.health.vistacan.setting.view.ResetPasswordFragment"
+        android:label="Reset_password"
+        tools:layout="@layout/fragment_reset_password" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.health.vistacan.setting.view.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+</navigation>

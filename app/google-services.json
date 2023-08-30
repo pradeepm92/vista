@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "544353109639",
+    "project_id": "vistacan-a058a",
+    "storage_bucket": "vistacan-a058a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544353109639:android:68557f9829822f35f3da22",
+        "android_client_info": {
+          "package_name": "com.health.vistacan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544353109639-mrta8ai222muh36c2inkah6vjfhmj58c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs393rlh13WVMMiC4es_1t8MsBxr1OlbY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544353109639-mrta8ai222muh36c2inkah6vjfhmj58c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544353109639:android:d3866d16ceb7cfb9f3da22",
+        "android_client_info": {
+          "package_name": "com.health.vistacan.QA"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544353109639-mrta8ai222muh36c2inkah6vjfhmj58c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs393rlh13WVMMiC4es_1t8MsBxr1OlbY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544353109639-mrta8ai222muh36c2inkah6vjfhmj58c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
